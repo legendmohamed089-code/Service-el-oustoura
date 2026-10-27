@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدمات الأسطورة - SERVICES AL-OSTOURA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ملصق الطائرة و Visa Shengen في الأعلى على اليمين تحت اسم خدمات الأسطورة -->
+    <div class="visa-shengen-badge">
+        <img src="plane.png" alt="Visa Shengen" />
+        <span>visa shengen</span>
+    </div>
+
+    <!-- رأس الصفحة / الهيدر -->
+    <header class="header">
+        <div class="logo-container">
+            <h2>خدمات الأسطورة</h2>
+            <span>SERVICES AL-OSTOURA</span>
+        </div>
+        <div class="crown-icon">👑</div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="hero-section">
+        <h1>تسهيل إداري شامل وإعداد الوثائق والمستندات الرسمية</h1>
+        <p>حلول إدارية متكاملة لـ CNSS، تجهيز شواهد العمل والأجر، حجز المواعيد وتجهيز وثائق التأشيرة بدقة وسرعة عالية</p>
+
+        <!-- نموذج الطلب -->
+        <div class="form-container">
+            <div class="form-group">
+                <label>الخدمة المطلوبة</label>
+                <select>
+                    <option>-- اختر الخدمة --</option>
+                    <option>شواهد العمل</option>
+                    <option>كشف حساب بنكي</option>
+                    <option>تأمين سفر</option>
+                    <option>دعوة سياحية</option>
+                    <option>سجل تجاري</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>الاسم الكامل</label>
+                <input type="text" placeholder="اكتب اسمك الكامل">
+            </div>
+
+            <div class="form-group">
+                <label>رقم الهاتف / الواتساب</label>
+                <input type="text" placeholder="06XXXXXXXX">
+            </div>
+
+            <button class="whatsapp-btn">
+                إرسال الطلب فوراً عبر الواتساب 🚀
+            </button>
+        </div>
+    </main>
+
+    <!-- زر التواصل السريع -->
+    <a href="#" class="float-whatsapp">تواصل فوراً عبر الواتساب 💬</a>
+
+</body>
+</html>
