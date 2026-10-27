@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: #f7f4ef; /* خلفية بيج فاتح Light Beige */
+    background-color: #f7f4ef; /* خلفية بيج فاتح */
     color: #2c2a29;
     font-family: 'Cairo', Tahoma, sans-serif;
     margin: 0;
@@ -13,62 +13,86 @@ body {
     min-height: 100vh;
 }
 
-/* شارة التأشيرة الطائرة والكرة الأرضية */
+/* زر الواتساب في الأعلى على اليسار */
+.top-left-whatsapp {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    background-color: #22c55e;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 100;
+    transition: transform 0.2s ease;
+}
+
+.top-left-whatsapp:hover {
+    transform: translateY(-2px);
+}
+
+/* شارة Visa Schengen في الأعلى على اليمين */
 .visa-shengen-badge {
     position: absolute;
-    top: 20px;
+    top: 25px;
     right: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
     background: #ffffff;
-    padding: 10px 14px;
-    border-radius: 14px;
+    padding: 8px 12px;
+    border-radius: 12px;
     border: 1px solid #e2e8f0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .badge-icons {
     position: relative;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .globe-icon {
-    font-size: 42px; /* كرة أرضية بحجم أكبر */
+    font-size: 36px;
     color: #0ea5e9;
     opacity: 0.85;
 }
 
 .plane-icon {
     position: absolute;
-    font-size: 24px; /* طائرة واقعية فوق الكرة الأرضية */
+    font-size: 20px;
     color: #0284c7;
-    top: 2px;
+    top: 0px;
     right: -2px;
     transform: rotate(-20deg);
     animation: fly 3s ease-in-out infinite alternate;
 }
 
 .badge-text {
-    margin-top: 6px;
+    margin-top: 4px;
     color: #0369a1;
     font-weight: 700;
-    font-size: 12px;
+    font-size: 11px;
     background: #e0f2fe;
-    padding: 3px 8px;
+    padding: 2px 6px;
     border-radius: 6px;
 }
 
-/* اللوغو في الوسط بحجم بارز ومحتراف */
+/* اللوغو في المنتصف */
 .header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 10px 10px 10px;
+    padding: 30px 10px 10px 10px;
 }
 
 .brand-center {
@@ -76,16 +100,23 @@ body {
 }
 
 .main-logo {
-    max-width: 220px;
+    max-width: 240px;
     height: auto;
     border-radius: 12px;
-    filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.08));
+    filter: drop-shadow(0px 4px 12px rgba(0,0,0,0.08));
+}
+
+.fallback-brand {
+    font-size: 32px;
+    font-weight: 900;
+    color: #1e293b;
+    margin: 0;
 }
 
 .hero-section {
     text-align: center;
     max-width: 600px;
-    margin: 25px auto;
+    margin: 20px auto 40px auto;
 }
 
 .hero-section h2 {
@@ -101,7 +132,7 @@ body {
     line-height: 1.6;
 }
 
-/* بطاقة النموذج */
+/* نموذج الطلب */
 .form-container {
     background-color: #ffffff;
     border: 1px solid #e2e8f0;
@@ -111,12 +142,12 @@ body {
     flex-direction: column;
     gap: 18px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: right;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
-    text-align: right;
     gap: 6px;
 }
 
@@ -154,23 +185,78 @@ body {
     cursor: pointer;
     font-family: 'Cairo', sans-serif;
     box-shadow: 0 4px 14px rgba(14, 165, 233, 0.3);
+    transition: transform 0.2s ease;
 }
 
-.float-whatsapp {
-    position: fixed;
-    bottom: 25px;
-    left: 25px;
-    background-color: #22c55e;
-    color: #fff;
-    padding: 12px 22px;
-    border-radius: 50px;
-    text-decoration: none;
+.whatsapp-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* قسم الخدمات الإدارية في الأسفل */
+.services-section {
+    max-width: 1000px;
+    margin: 50px auto 30px auto;
+    text-align: center;
+}
+
+.services-title {
+    font-size: 26px;
+    font-weight: 900;
+    color: #1e293b;
+    margin-bottom: 30px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.03);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 32px;
+    color: #0284c7;
+    margin-bottom: 15px;
+}
+
+.card-tag {
+    display: inline-block;
+    background: #e0f2fe;
+    color: #0369a1;
+    font-size: 11px;
     font-weight: 700;
-    font-size: 14px;
-    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.35);
+    padding: 3px 10px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.service-card h4 {
+    font-size: 18px;
+    color: #1e293b;
+    margin: 0 0 10px 0;
+}
+
+.service-card p {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
 }
 
 @keyframes fly {
     0% { transform: translate(0, 0) rotate(-20deg); }
-    100% { transform: translate(-4px, -5px) rotate(-25deg); }
+    100% { transform: translate(-3px, -4px) rotate(-25deg); }
 }
