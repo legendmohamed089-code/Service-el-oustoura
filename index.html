@@ -6,12 +6,16 @@
     <title>خدمات الأسطورة - LEGEND SERVICES</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
-    <!-- مكتبة FontAwesome لأيقونات واضحة وواقعية -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- ملصق Visa Schengen بطائرة واقعية وكرة أرضية كبيرة -->
+    <!-- زر التواصل السريع في الأعلى على اليسار -->
+    <a href="https://wa.me/212000000000" class="top-left-whatsapp">
+        <i class="fa-brands fa-whatsapp"></i> تواصل فوراً عبر الواتساب
+    </a>
+
+    <!-- ملصق Visa Schengen -->
     <div class="visa-shengen-badge">
         <div class="badge-icons">
             <i class="fa-solid fa-plane-departure plane-icon"></i>
@@ -20,19 +24,20 @@
         <span class="badge-text">Visa Schengen</span>
     </div>
 
-    <!-- رأس الصفحة يحتوي على اللوغو الجديد الخاص بك -->
+    <!-- رأس الصفحة واللوغو -->
     <header class="header">
         <div class="brand-center">
-            <img src="logo.jpg" alt="خدمات الأسطورة - LEGEND SERVICES" class="main-logo">
+            <!-- تأكد أن اسم صورة اللوغو لديك هو logo.jpg أو قم بتغييره هنا ليطابق اسم صورتك -->
+            <img src="logo.jpg" alt="خدمات الأسطورة - LEGEND SERVICES" class="main-logo" onerror="this.style.display='none'; document.getElementById('fallback-title').style.display='block';">
+            <h1 id="fallback-title" style="display:none;" class="fallback-brand">خدمات الأسطورة</h1>
         </div>
     </header>
 
-    <!-- المحتوى الرئيسي -->
+    <!-- المحتوى الرئيسي ونموذج الطلب -->
     <main class="hero-section">
         <h2>تسهيل إداري شامل وإعداد الوثائق والمستندات الرسمية</h2>
         <p>حلول إدارية متكاملة لـ CNSS، تجهيز شواهد العمل والأجر، حجز المواعيد وتجهيز وثائق التأشيرة بدقة وسرعة عالية</p>
 
-        <!-- نموذج الطلب -->
         <div class="form-container">
             <div class="form-group">
                 <label>الخدمة المطلوبة</label>
@@ -60,8 +65,37 @@
         </div>
     </main>
 
-    <!-- زر التواصل السريع -->
-    <a href="https://wa.me/212000000000" class="float-whatsapp">تواصل فوراً عبر الواتساب 💬</a>
+    <!-- قسم أبرز خدماتنا الإدارية المضاف في الأسفل -->
+    <section class="services-section">
+        <h3 class="services-title">أبرز خدماتنا الإدارية</h3>
+        <div class="services-grid">
+            
+            <!-- البطاقة الأولى -->
+            <div class="service-card">
+                <div class="card-icon"><i class="fa-solid fa-file-lines"></i></div>
+                <span class="card-tag">CNSS DOSSIERS</span>
+                <h4>تصاريح ومستندات CNSS</h4>
+                <p>إعداد وتحديث التصاريح الإدارية وتجهيز الملفات والتعويضات الخاصة بالصندوق الوطني للضمان الاجتماعي.</p>
+            </div>
+
+            <!-- البطاقة الثانية -->
+            <div class="service-card">
+                <div class="card-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                <span class="card-tag">ATTESTATIONS</span>
+                <h4>شواهد العمل والأجر</h4>
+                <p>صياغة وتجهيز شهادات العمل ووثائق الأجر (Bulletins de paie) وشهادات المغادرة وفق المساطر القانونية المعمول بها.</p>
+            </div>
+
+            <!-- البطاقة الثالثة -->
+            <div class="service-card">
+                <div class="card-icon"><i class="fa-solid fa-passport"></i></div>
+                <span class="card-tag">VISA SCHENGEN</span>
+                <h4>حجز المواعيد والتأشيرات</h4>
+                <p>تجهيز شامل لملفات التأشيرة (Visa Schengen)، حجز المواعيد القنصلية، وتأمين الوثائق المطلوبة للقبول بكل دقة.</p>
+            </div>
+
+        </div>
+    </section>
 
 </body>
 </html>
