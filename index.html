@@ -1,101 +1,106 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>خدمات الأسطورة - LEGEND SERVICES</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>خدمات الأسطورة - Legend Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#111111;
+  --gold:#CFA845;
+  --gold-dark:#B8963A;
+  --beige:#F5EFE6;
+  --beige-dark:#E8DDD0;
+  --white:#FFFFFF;
+  --gray:#6B7280;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Cairo', sans-serif;}
+body{background:var(--beige);color:var(--black);line-height:1.6;}
+header{background:var(--black);padding:15px 5%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;}
+.logo-area{display:flex;align-items:center;gap:12px;}
+.logo-area img{width:65px;height:65px;object-fit:contain;background:white;border-radius:50%;padding:5px;}
+.logo-text span{display:block;line-height:1.1;}
+.logo-text .ar{color:var(--white);font-weight:700;font-size:14px;}
+.logo-text .en{color:var(--gold);font-size:10px;letter-spacing:1px;}
+nav a{color:var(--beige);text-decoration:none;margin:0 12px;font-size:14px;transition:.3s;}
+nav a:hover{color:var(--gold);}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:var(--black);padding:10px 22px;border-radius:8px;text-decoration:none;font-weight:700;display:inline-block;transition:.3s;border:none;cursor:pointer;}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(207,168,69,.4);}
+.hero{padding:60px 5%;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;background:linear-gradient(180deg,var(--beige-dark) 0%, var(--beige) 100%);}
+.hero h1{font-size:52px;font-weight:800;line-height:1.1;margin-bottom:15px;}
+.hero p{color:var(--gray);margin-bottom:25px;font-size:16px;}
+.hero-btns{display:flex;gap:15px;margin-bottom:25px;}
+.btn-outline{border:2px solid var(--gold);color:var(--black);padding:9px 22px;border-radius:8px;text-decoration:none;font-weight:700;}
+.badges{display:flex;gap:25px;font-size:13px;font-weight:700;}
+.badges i{color:var(--gold);margin-left:5px;}
+.hero-card{background:var(--white);border:1px solid var(--gold);border-radius:16px;padding:25px;box-shadow:0 20px 40px rgba(0,0,0,.08);}
+.hero-card-item{padding:18px 0;border-bottom:1px solid var(--beige);display:flex;align-items:center;gap:12px;font-weight:700;}
+.hero-card-item:last-child{border:none;}
+.icon{width:32px;height:32px;background:var(--beige);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:18px;}
+.services{padding:60px 5%;background:var(--white);}
+.services h2{text-align:center;font-size:36px;margin-bottom:40px;}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;}
+.card{background:var(--white);border:1px solid #F0E6D8;border-radius:14px;padding:30px 20px;text-align:center;transition:.3s;box-shadow:0 5px 15px rgba(0,0,0,.03);}
+.card:hover{transform:translateY(-5px);border-color:var(--gold);box-shadow:0 15px 30px rgba(207,168,69,.15);}
+.card-icon{width:56px;height:56px;background:var(--gold);border-radius:50%;margin:0 auto 15px;display:flex;align-items:center;justify-content:center;color:white;font-size:24px;}
+footer{background:var(--black);color:var(--beige);text-align:center;padding:20px;font-size:13px;}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.cards{grid-template-columns:1fr}header{flex-direction:column;gap:15px}}
+</style>
 </head>
 <body>
 
-    <!-- زر التواصل السريع في الأعلى على اليسار -->
-    <a href="https://wa.me/212000000000" class="top-left-whatsapp">
-        <i class="fa-brands fa-whatsapp"></i> تواصل فوراً عبر الواتساب
-    </a>
-
-    <!-- ملصق Visa Schengen -->
-    <div class="visa-shengen-badge">
-        <div class="badge-icons">
-            <i class="fa-solid fa-plane-departure plane-icon"></i>
-            <i class="fa-solid fa-earth-americas globe-icon"></i>
-        </div>
-        <span class="badge-text">Visa Schengen</span>
+<header>
+  <div class="logo-area">
+    <img src="logo_legend_services_black_text.jpg" alt="Legend Logo">
+    <div class="logo-text">
+      <span class="ar">خدمات الأسطورة</span>
+      <span class="en">LEGEND SERVICES</span>
     </div>
+  </div>
+  <nav>
+    <a href="#">الصفحة الرئيسية</a>
+    <a href="#">خدماتنا</a>
+    <a href="#">من نحن</a>
+    <a href="#">عملاؤنا</a>
+    <a href="#">اتصل بنا</a>
+    <a href="#" class="btn-gold">تواصل معنا</a>
+  </nav>
+</header>
 
-    <!-- رأس الصفحة واللوغو -->
-    <header class="header">
-        <div class="brand-center">
-            <!-- تأكد أن اسم صورة اللوغو لديك هو logo.jpg أو قم بتغييره هنا ليطابق اسم صورتك -->
-            <img src="logo.jpg" alt="خدمات الأسطورة - LEGEND SERVICES" class="main-logo" onerror="this.style.display='none'; document.getElementById('fallback-title').style.display='block';">
-            <h1 id="fallback-title" style="display:none;" class="fallback-brand">خدمات الأسطورة</h1>
-        </div>
-    </header>
+<section class="hero">
+  <div>
+    <h1>حلول خدمية فاخرة<br>بمعايير عالمية</h1>
+    <p>نقدم لكم خدمات متكاملة ومبتكرة تلبي تطلعاتكم باحترافية وجودة لا تضاهى، مع فريق متخصص يضمن لكم التميّز والموثوقية في كل خطوة.</p>
+    <div class="hero-btns">
+      <a href="#" class="btn-gold">اطلب الخدمة الآن</a>
+      <a href="#" class="btn-outline">تعرف على خدماتنا</a>
+    </div>
+    <div class="badges">
+      <div><i>✔</i> موثوقية 100%</div>
+      <div><i>★</i> خبرة +10 سنوات</div>
+      <div><i>◍</i> دعم 24/7</div>
+    </div>
+  </div>
+  <div class="hero-card">
+    <div class="hero-card-item"><div class="icon">📦</div> خدمات لوجستية متكاملة</div>
+    <div class="hero-card-item"><div class="icon">📄</div> استشارات احترافية</div>
+    <div class="hero-card-item"><div class="icon">🛠️</div> صيانة وإدارة المنشآت</div>
+  </div>
+</section>
 
-    <!-- المحتوى الرئيسي ونموذج الطلب -->
-    <main class="hero-section">
-        <h2>تسهيل إداري شامل وإعداد الوثائق والمستندات الرسمية</h2>
-        <p>حلول إدارية متكاملة لـ CNSS، تجهيز شواهد العمل والأجر، حجز المواعيد وتجهيز وثائق التأشيرة بدقة وسرعة عالية</p>
+<section class="services">
+  <h2>خدماتنا الأساسية</h2>
+  <div class="cards">
+    <div class="card"><div class="card-icon">💼</div><h3>الخدمات الاستشارية</h3><p>استشارات استراتيجية وحلول مخصصة لنمو أعمالك</p></div>
+    <div class="card"><div class="card-icon">🏗️</div><h3>الخدمات الميدانية</h3><p>فرق ميدانية متخصصة لخدمات الصيانة والدعم الفوري</p></div>
+    <div class="card"><div class="card-icon">🏢</div><h3>الخدمات التجارية</h3><p>إدارة وتشغيل الأعمال بأعلى معايير الجودة والكفاءة</p></div>
+  </div>
+</section>
 
-        <div class="form-container">
-            <div class="form-group">
-                <label>الخدمة المطلوبة</label>
-                <select>
-                    <option>-- اختر الخدمة --</option>
-                    <option>تأشيرة شنغن (Visa Schengen)</option>
-                    <option>شواهد العمل والأجر</option>
-                    <option>تصريح CNSS</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label>الاسم الكامل</label>
-                <input type="text" placeholder="اكتب اسمك الكامل">
-            </div>
-
-            <div class="form-group">
-                <label>رقم الهاتف / الواتساب</label>
-                <input type="text" placeholder="06XXXXXXXX">
-            </div>
-
-            <button class="whatsapp-btn">
-                إرسال الطلب فوراً عبر الواتساب 🚀
-            </button>
-        </div>
-    </main>
-
-    <!-- قسم أبرز خدماتنا الإدارية المضاف في الأسفل -->
-    <section class="services-section">
-        <h3 class="services-title">أبرز خدماتنا الإدارية</h3>
-        <div class="services-grid">
-            
-            <!-- البطاقة الأولى -->
-            <div class="service-card">
-                <div class="card-icon"><i class="fa-solid fa-file-lines"></i></div>
-                <span class="card-tag">CNSS DOSSIERS</span>
-                <h4>تصاريح ومستندات CNSS</h4>
-                <p>إعداد وتحديث التصاريح الإدارية وتجهيز الملفات والتعويضات الخاصة بالصندوق الوطني للضمان الاجتماعي.</p>
-            </div>
-
-            <!-- البطاقة الثانية -->
-            <div class="service-card">
-                <div class="card-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
-                <span class="card-tag">ATTESTATIONS</span>
-                <h4>شواهد العمل والأجر</h4>
-                <p>صياغة وتجهيز شهادات العمل ووثائق الأجر (Bulletins de paie) وشهادات المغادرة وفق المساطر القانونية المعمول بها.</p>
-            </div>
-
-            <!-- البطاقة الثالثة -->
-            <div class="service-card">
-                <div class="card-icon"><i class="fa-solid fa-passport"></i></div>
-                <span class="card-tag">VISA SCHENGEN</span>
-                <h4>حجز المواعيد والتأشيرات</h4>
-                <p>تجهيز شامل لملفات التأشيرة (Visa Schengen)، حجز المواعيد القنصلية، وتأمين الوثائق المطلوبة للقبول بكل دقة.</p>
-            </div>
-
-        </div>
-    </section>
+<footer>
+© 2026 Legend Services | جميع الحقوق محفوظة | الشروط والأحكام | سياسة الخصوصية
+</footer>
 
 </body>
 </html>
