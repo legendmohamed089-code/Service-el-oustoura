@@ -280,33 +280,6 @@
             color: #4ade80;
         }
 
-        /* قسم رمز الاستجابة السريعة (QR Code) */
-        .qr-section {
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            border-radius: 20px;
-            padding: 3rem 2rem;
-            text-align: center;
-            color: var(--white);
-            margin-top: 4rem;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            border: 2px solid var(--accent);
-        }
-
-        .qr-container {
-            background: var(--white);
-            padding: 15px;
-            display: inline-block;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-            margin-top: 1.5rem;
-        }
-
-        .qr-img {
-            width: 180px;
-            height: 180px;
-            display: block;
-        }
-
         /* استمارة طلب الخدمة */
         .calculator-section {
             background: var(--white);
@@ -342,7 +315,7 @@
             border-color: var(--accent);
         }
 
-        /* آراء العملاء (خلفية زاهية ومشرقة بدون كروت بيضاء) */
+        /* آراء العملاء (خلفية زاهية ومشرقة وبدون خلفيات بيضاء للبطاقات) */
         .testimonials {
             background: linear-gradient(135deg, #fef3c7 0%, #e0f2fe 100%);
             padding: 5rem 1.5rem;
@@ -360,25 +333,28 @@
         }
 
         .testimonial-card {
-            background: rgba(255, 255, 255, 0.75);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.35);
+            backdrop-filter: blur(8px);
             padding: 2rem;
             border-radius: 16px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
             border-right: 5px solid var(--accent);
-            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-top: 1px solid rgba(255, 255, 255, 0.6);
+            border-left: 1px solid rgba(255, 255, 255, 0.6);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.6);
             transition: 0.3s;
         }
 
         .testimonial-card:hover {
             transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.6);
         }
 
         .testimonial-card p {
             font-style: italic;
             color: var(--text-main);
             margin-bottom: 1rem;
+            font-weight: 500;
         }
 
         .testimonial-card h4 {
@@ -440,8 +416,9 @@
                 <span>LEGEND SERVICES</span>
             </div>
         </div>
+        <!-- تم حذف أيقونة الواتساب من هنا وبقاء النص فقط -->
         <a href="https://wa.me/212679931143?text=%D8%A7%D9%84%D9%85%D8%B1%D8%AC%D9%88%20%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B8%D8%A7%D8%B1%20%D9%88%20%D8%B4%D9%83%D8%B1%D8%A7%20%D8%B9%D9%84%D9%89%20%D8%AB%D9%82%D8%AA%D9%83%D9%85%20%D8%A8%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A7%D8%B3%D8%B7%D9%88%D8%B1%D8%A9%20%D9%88%D8%A7%D9%86%D9%86%D8%A7%20%D9%81%D9%8A%20%D9%84%D8%AD%D8%B8%D8%A7%D8%AA%20%D8%B3%D9%88%D9%81%20%D9%86%D8%AA%D9%88%D8%A7%D8%B5%D9%84%20%D9%85%D8%B9%D9%83%20%D9%88%D8%B4%D9%83%D8%B1%D8%A7." class="header-cta" target="_blank">
-            <i class="fa-brands fa-whatsapp"></i> واتساب مباشر
+            واتساب مباشر
         </a>
     </header>
 
@@ -503,15 +480,6 @@
             </div>
         </div>
 
-        <!-- قسم رمز الاستجابة السريعة (QR Code) -->
-        <div class="qr-section">
-            <h2>زوروا موقعنا بسرعة عبر الهاتف!</h2>
-            <p style="color: #cbd5e1; margin-top: 0.5rem;">قم بمسح رمز الاستجابة السريعة (QR Code) بكاميرا هاتفك للوصول المباشر للخدمات</p>
-            <div class="qr-container">
-                <img src="qrcode.jpg" alt="QR Code خدمات الأسطورة" class="qr-img">
-            </div>
-        </div>
-
         <!-- استمارة طلب الخدمة -->
         <div class="calculator-section">
             <div class="section-title" style="margin-bottom: 2rem;">
@@ -548,7 +516,7 @@
         </div>
     </div>
 
-    <!-- قسم آراء العملاء بدون خلفية بيضاء مع إضافة مريم -->
+    <!-- قسم آراء العملاء بدون خلفية بيضاء وبلون زاهي -->
     <section class="testimonials">
         <div class="section-title">
             <h2>آراء زبنائنا الكرام</h2>
