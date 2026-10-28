@@ -280,7 +280,7 @@
             color: #4ade80;
         }
 
-        /* قسم QR Code الجديد */
+        /* قسم رمز الاستجابة السريعة (QR Code) */
         .qr-section {
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
             border-radius: 20px;
@@ -342,7 +342,7 @@
             border-color: var(--accent);
         }
 
-        /* آراء العملاء (خلفية زاهية ومشرقة جديدة) */
+        /* آراء العملاء (خلفية زاهية ومشرقة بدون كروت بيضاء) */
         .testimonials {
             background: linear-gradient(135deg, #fef3c7 0%, #e0f2fe 100%);
             padding: 5rem 1.5rem;
@@ -360,11 +360,19 @@
         }
 
         .testimonial-card {
-            background: var(--white);
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(10px);
             padding: 2rem;
             border-radius: 16px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
             border-right: 5px solid var(--accent);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            transition: 0.3s;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.95);
         }
 
         .testimonial-card p {
@@ -495,7 +503,7 @@
             </div>
         </div>
 
-        <!-- قسم رمز الاستجابة السريعة (QR Code) الجديد -->
+        <!-- قسم رمز الاستجابة السريعة (QR Code) -->
         <div class="qr-section">
             <h2>زوروا موقعنا بسرعة عبر الهاتف!</h2>
             <p style="color: #cbd5e1; margin-top: 0.5rem;">قم بمسح رمز الاستجابة السريعة (QR Code) بكاميرا هاتفك للوصول المباشر للخدمات</p>
@@ -540,7 +548,7 @@
         </div>
     </div>
 
-    <!-- قسم آراء العملاء (خلفية زاهية ومشرقة جديدة) -->
+    <!-- قسم آراء العملاء بدون خلفية بيضاء مع إضافة مريم -->
     <section class="testimonials">
         <div class="section-title">
             <h2>آراء زبنائنا الكرام</h2>
@@ -566,6 +574,10 @@
             <div class="testimonial-card">
                 <p>"عاونوني فـ تجميع أوراق الشراء ديال الدار ومواكبة إدارية احترافية حتى استلمت منزلي فـ وقت وجيز."</p>
                 <h4>- عزيز (الدار البيضاء)</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"تجربة جد رائعة، تواصلت معهم بخصوص ملف السفر ووجدو ليا كلشي فـ المستوى المطلوب وبدون تعقيدات."</p>
+                <h4>- مريم (الرباط)</h4>
             </div>
         </div>
     </section>
