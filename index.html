@@ -194,7 +194,6 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
-        /* ألوان الخلفيات الزاهية للبطاقات */
         .card-visa {
             background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
         }
@@ -213,8 +212,41 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
         }
 
+        /* أيقونة الطائرة والكرة الأرضية الخاصة ببطاقة الفيزا */
+        .plane-icon-wrapper {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.18);
+            padding: 12px 20px;
+            border-radius: 50px;
+            margin-bottom: 1.2rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .plane-icon-wrapper i.fa-plane-departure {
+            font-size: 2.2rem;
+            color: var(--accent);
+        }
+
+        .plane-icon-wrapper i.fa-earth-americas {
+            font-size: 1.8rem;
+            color: #38bdf8;
+        }
+
+        .visa-subtext {
+            font-size: 0.95rem;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            color: #fef08a;
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+        }
+
         .service-card i.card-icon {
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             color: var(--accent);
             margin-bottom: 1.2rem;
             display: inline-block;
@@ -226,7 +258,7 @@
         .service-card h3 {
             font-size: 1.5rem;
             font-weight: 900;
-            margin-bottom: 1.2rem;
+            margin-bottom: 0.8rem;
             color: var(--white);
         }
 
@@ -241,7 +273,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            font-size: 1.05rem;
+            font-size: 1.02rem;
         }
 
         .service-card ul li i {
@@ -304,6 +336,7 @@
             padding: 2rem;
             border-radius: 16px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-right: 4px solid var(--accent);
         }
 
         .testimonial-card p {
@@ -394,29 +427,34 @@
         </div>
 
         <div class="services-grid">
-            <!-- كارت 1: التأشيرات والسفر -->
+            <!-- كارت 1: التأشيرات والسفر المحدث بالأيقونة الجديدة -->
             <div class="service-card card-visa">
-                <i class="fa-solid fa-passport card-icon"></i>
+                <div class="plane-icon-wrapper">
+                    <i class="fa-solid fa-plane-departure"></i>
+                    <i class="fa-solid fa-earth-americas"></i>
+                </div>
                 <h3>التأشيرات والسفر (Visa)</h3>
+                <div class="visa-subtext">Visa Schengen</div>
                 <ul>
-                    <li><i class="fa-solid fa-circle-check"></i> حجز مواعيد دقيقة ومنظمة</li>
-                    <li><i class="fa-solid fa-circle-check"></i> إعداد ملف شنجن متكامل واحترافي</li>
+                    <li><i class="fa-solid fa-circle-check"></i> إعداد ملف الفيزا شنجن متكامل واحترافي</li>
                     <li><i class="fa-solid fa-circle-check"></i> تفادي أخطاء الرفض والإرجاع</li>
+                    <li><i class="fa-solid fa-circle-check"></i> حجز مواعيد دقيقة ومنظمة</li>
                 </ul>
             </div>
 
-            <!-- كارت 2: الشهادات والوثائق الإدارية -->
+            <!-- كارت 2: الشهادات والوثائق الإدارية المحدث بفصل شهادة الأجر وقسائم الدفع -->
             <div class="service-card card-docs">
                 <i class="fa-solid fa-file-signature card-icon"></i>
                 <h3>الشهادات والوثائق الإدارية</h3>
                 <ul>
                     <li><i class="fa-solid fa-circle-check"></i> شهادة العمل (Attestation de travail)</li>
-                    <li><i class="fa-solid fa-circle-check"></i> شهادة الأجر وقسائم الدفع (Bulletins de paie)</li>
+                    <li><i class="fa-solid fa-circle-check"></i> شهادة الأجر (Attestation de salaire)</li>
+                    <li><i class="fa-solid fa-circle-check"></i> قسائم الدفع (Bulletins de paie)</li>
                     <li><i class="fa-solid fa-circle-check"></i> التصريح لدى الصندوق (CNSS)</li>
                 </ul>
             </div>
 
-            <!-- كارت 3: الخدمات والتسهيلات العقارية المحدثة -->
+            <!-- كارت 3: الخدمات والتسهيلات العقارية -->
             <div class="service-card card-realestate">
                 <i class="fa-solid fa-house-chimney-user card-icon"></i>
                 <h3>الخدمات والتسهيلات العقارية</h3>
@@ -455,7 +493,7 @@
 
                 <div class="form-group">
                     <label for="clientCity">المدينة:</label>
-                    <input type="text" id="clientCity" class="form-control" placeholder="مثال: الدار البيضاء، الرباط..." required>
+                    <input type="text" id="clientCity" class="form-control" placeholder="مثال: الدار البيضاء، أكادير..." required>
                 </div>
 
                 <button type="submit" class="btn-main" style="width: 100%; justify-content: center; border: none; cursor: pointer; background-color: var(--success); color: white;">
@@ -465,7 +503,7 @@
         </div>
     </div>
 
-    <!-- قسم آراء العملاء -->
+    <!-- قسم آراء العملاء المحدث بالإضافات الجديدة -->
     <section class="testimonials">
         <div class="section-title">
             <h2>آراء زبنائنا الكرام</h2>
@@ -479,6 +517,18 @@
             <div class="testimonial-card">
                 <p>"تكتكوا ليا أوراق الـ CNSS وشهادة الأجر بلا صداع الراس وبأمانة عالية. كنوّصي بيهوم بشدة."</p>
                 <h4>- فاطمة الزهراء</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"تعامل راقي وسرعة في تجهيز ملف شنجن، دفعته وتقبل ليا بكل سهولة وبلا أخطاء. الله يجازيكم بخير."</p>
+                <h4>- سناء (الدار البيضاء)</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"كنت محتاج شهادة العمل وقسائم الدفع بطلب مستعجل، وجدوهوم ليا فـ نفس النهار وبدقة عالية."</p>
+                <h4>- محمد (أكادير)</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"عاونوني فـ تجميع أوراق الشراء ديال الدار ومواكبة إدارية احترافية حتى استلمت منزلي فـ وقت وجيز."</p>
+                <h4>- عزيز (الدار البيضاء)</h4>
             </div>
         </div>
     </section>
@@ -496,7 +546,7 @@
     </footer>
 
     <!-- زر واتساب عائم -->
-    <a href="https://wa.me/212679931143?text=%D8%A7%D9%84%D9%85%D8%B1%D8%AC%D9%88%20%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B8%D8%A7%D8%B1%20%D9%88%20%D8%B4%D9%83%D8%B1%D8%A7%20%D8%B9%D9%84%D9%89%20%D8%AB%D9%82%D8%AA%D9%83%D9%85%20%D8%A8%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A7%D8%B3%D8%B7%D9%88%D8%B1%D8%A9%20%D9%88%D8%A7%D9%86%D9%86%D8%A7%20%D9%81%D9%8A%20%D9%84%D8%AD%D8%B8%D8%A7%D8%AA%20%D8%B3%D9%88%D9%81%20%D9%86%D8%AA%D9%88%D8%A7%D8%B5%D9%84%20%D9%85%D8%B9%D9%83%20%D9%88%D8%B4%D9%83%D8%B1%D8%A7." class="whatsapp-float" target="_blank" title="تواصل معنا عبر الواتساب">
+    <a href="https://wa.me/212679931143?text=%D8%A7%D9%84%D9%85%D8%B1%D8%AC%D9%88%20%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B8%D8%A7%D8%B1%20%D9%88%20%D8%B4%D9%83%D8%B1%D8%A7%20%D8%B9%D9%84%D9%89%20%D8%AB%D9%82%D8%AA%D9%83%D9%85%20%D8%A8%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A7%D8%B3%D8%B7%D9%88%D8%B1%D8%A9%20%D9%88%D8%A7%D9%86%D9%86%D8%A7%20%D9%81%D9%8A%20%D9%84%D8%AD%D8%B8%D8%A7%D8%AA%20%D8%B3%D9%88%D9%81%20%D9%8AA%D9%88%D8%A7%D8%B5%D9%84%20%D9%85%D8%B9%D9%83%20%D9%88%D8%B4%D9%83%D8%B1%D8%A7." class="whatsapp-float" target="_blank" title="تواصل معنا عبر الواتساب">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
