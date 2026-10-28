@@ -97,7 +97,7 @@
             transform: translateY(-2px);
         }
 
-        /* واجهة الهيرو (Hero Section) */
+        /* قسم الهيرو (Hero Section) */
         .hero {
             background: linear-gradient(rgba(15, 23, 42, 0.88), rgba(30, 41, 59, 0.92)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80') center/cover;
             color: var(--white);
@@ -176,7 +176,7 @@
             font-size: 1.1rem;
         }
 
-        /* شبكة البطاقات */
+        /* شبكة البطاقات بخلفيات زاهية وأنيقة */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -245,4 +245,349 @@
         }
 
         .service-card i.card-icon {
-            font
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 1.2rem;
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 15px;
+            border-radius: 50%;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            font-weight: 900;
+            margin-bottom: 0.8rem;
+            color: var(--white);
+        }
+
+        .service-card ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .service-card ul li {
+            margin-bottom: 0.8rem;
+            color: #f1f5f9;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.02rem;
+        }
+
+        .service-card ul li i {
+            font-size: 1rem;
+            color: #4ade80;
+        }
+
+        /* استمارة طلب الخدمة */
+        .calculator-section {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+            margin-top: 4rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 1rem;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: var(--accent);
+        }
+
+        /* آراء العملاء (خلفية زاهية ومشرقة وبدون خلفيات بيضاء للبطاقات) */
+        .testimonials {
+            background: linear-gradient(135deg, #fef3c7 0%, #e0f2fe 100%);
+            padding: 5rem 1.5rem;
+            margin-top: 4rem;
+            border-top: 3px solid var(--accent);
+            border-bottom: 3px solid var(--accent);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.35);
+            backdrop-filter: blur(8px);
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+            border-right: 5px solid var(--accent);
+            border-top: 1px solid rgba(255, 255, 255, 0.6);
+            border-left: 1px solid rgba(255, 255, 255, 0.6);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+            transition: 0.3s;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.6);
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            color: var(--text-main);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .testimonial-card h4 {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* التذييل (Footer) */
+        footer {
+            background-color: var(--primary);
+            color: var(--white);
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            color: #94a3b8;
+        }
+
+        /* زر واتساب عائم */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+            background-color: var(--success);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .calculator-section { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- رأس الصفحة -->
+    <header>
+        <div class="logo-container">
+            <img src="logo.JPG" alt="شعار خدمات الأسطورة" class="logo-img">
+            <div class="logo-text">
+                خدمات الأسطورة
+                <span>LEGEND SERVICES</span>
+            </div>
+        </div>
+        <!-- تم حذف أيقونة الواتساب من هنا وبقاء النص فقط -->
+        <a href="https://wa.me/212679931143?text=%D8%A7%D9%84%D9%85%D8%B1%D8%AC%D9%88%20%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B8%D8%A7%D8%B1%20%D9%88%20%D8%B4%D9%83%D8%B1%D8%A7%20%D8%B9%D9%84%D9%89%20%D8%AB%D9%82%D8%AA%D9%83%D9%85%20%D8%A8%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A7%D8%B3%D8%B7%D9%88%D8%B1%D8%A9%20%D9%88%D8%A7%D9%86%D9%86%D8%A7%20%D9%81%D9%8A%20%D9%84%D8%AD%D8%B8%D8%A7%D8%AA%20%D8%B3%D9%88%D9%81%20%D9%86%D8%AA%D9%88%D8%A7%D8%B5%D9%84%20%D9%85%D8%B9%D9%83%20%D9%88%D8%B4%D9%83%D8%B1%D8%A7." class="header-cta" target="_blank">
+            واتساب مباشر
+        </a>
+    </header>
+
+    <!-- واجهة الهيرو -->
+    <section class="hero">
+        <img src="logo.JPG" alt="خدمات الأسطورة" class="hero-logo-big">
+        <h1>سرعة، دقة، واحترافية في <span>معاملاتك الإدارية والفيزا</span></h1>
+        <p>بلا صداع الراس والروينة.. وفّر وقتك وجهدك واترك إعداد ملفاتك، شواهدك، وخدماتك العقارية في أيدٍ أمينة.</p>
+        <a href="#services" class="btn-main">
+            <i class="fa-solid fa-arrow-down"></i> اكتشف جميع خدماتنا
+        </a>
+    </section>
+
+    <!-- قسم الخدمات الرئيسية -->
+    <div class="container" id="services">
+        <div class="section-title">
+            <h2>خدماتنا الاحترافية</h2>
+            <p>حلول متكاملة مصممة خصيصاً لتلبية احتياجاتك الإدارية، السفر، والعقارات</p>
+        </div>
+
+        <div class="services-grid">
+            <!-- كارت 1: التأشيرات والسفر -->
+            <div class="service-card card-visa">
+                <div class="plane-icon-wrapper">
+                    <i class="fa-solid fa-plane-departure"></i>
+                    <i class="fa-solid fa-earth-americas"></i>
+                </div>
+                <h3>التأشيرات والسفر (Visa)</h3>
+                <div class="visa-subtext">Visa Schengen</div>
+                <ul>
+                    <li><i class="fa-solid fa-circle-check"></i> إعداد ملف الفيزا شنجن متكامل واحترافي</li>
+                    <li><i class="fa-solid fa-circle-check"></i> تفادي أخطاء الرفض والإرجاع</li>
+                    <li><i class="fa-solid fa-circle-check"></i> حجز مواعيد دقيقة ومنظمة</li>
+                </ul>
+            </div>
+
+            <!-- كارت 2: الشهادات والوثائق الإدارية -->
+            <div class="service-card card-docs">
+                <i class="fa-solid fa-file-signature card-icon"></i>
+                <h3>الشهادات والوثائق الإدارية</h3>
+                <ul>
+                    <li><i class="fa-solid fa-circle-check"></i> شهادة العمل (Attestation de travail)</li>
+                    <li><i class="fa-solid fa-circle-check"></i> شهادة الأجر (Attestation de salaire)</li>
+                    <li><i class="fa-solid fa-circle-check"></i> قسائم الدفع (Bulletins de paie)</li>
+                    <li><i class="fa-solid fa-circle-check"></i> التصريح لدى الصندوق (CNSS)</li>
+                </ul>
+            </div>
+
+            <!-- كارت 3: الخدمات والتسهيلات العقارية -->
+            <div class="service-card card-realestate">
+                <i class="fa-solid fa-house-chimney-user card-icon"></i>
+                <h3>الخدمات والتسهيلات العقارية</h3>
+                <ul>
+                    <li><i class="fa-solid fa-circle-check"></i> المساعدة في تجميع أوراق الشراء</li>
+                    <li><i class="fa-solid fa-circle-check"></i> تسريع وتسهيل الإجراءات الإدارية للعقار</li>
+                    <li><i class="fa-solid fa-circle-check"></i> مواكبة شخصية خطوة بخطوة</li>
+                    <li><i class="fa-solid fa-circle-check"></i> امتلك منزلك في مدة لا تتجاوز 40 يوم</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- استمارة طلب الخدمة -->
+        <div class="calculator-section">
+            <div class="section-title" style="margin-bottom: 2rem;">
+                <h2>اطلب خدمتك الآن مباشرة</h2>
+                <p>أدخل بياناتك وسننتقل بك فوراً للواتساب لتأكيد الطلب وبدء الإجراءات</p>
+            </div>
+
+            <form id="leadForm" onsubmit="sendToWhatsApp(event)">
+                <div class="form-group">
+                    <label for="fullName">الاسم الكامل:</label>
+                    <input type="text" id="fullName" class="form-control" placeholder="ادخل اسمك الكامل..." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="serviceType">اختر الخدمة المطلوبة:</label>
+                    <select id="serviceType" class="form-control" required>
+                        <option value="">-- اضغط للاختيار --</option>
+                        <option value="ملف تأشيرة شنجن ومواعيد (Visa)">ملف تأشيرة شنجن ومواعيد (Visa)</option>
+                        <option value="شهادات إدارية (عمل، أجر، CNSS)">شهادات إدارية (عمل، أجر، CNSS)</option>
+                        <option value="خدمات وتسهيلات عقارية">خدمات وتسهيلات عقارية</option>
+                        <option value="استشارة أو خدمة أخرى">استشارة أو خدمة أخرى</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="clientCity">المدينة:</label>
+                    <input type="text" id="clientCity" class="form-control" placeholder="مثال: الدار البيضاء، أكادير..." required>
+                </div>
+
+                <button type="submit" class="btn-main" style="width: 100%; justify-content: center; border: none; cursor: pointer; background-color: var(--success); color: white;">
+                    <i class="fa-brands fa-whatsapp"></i> إرسال الطلب عبر الواتساب فوراً
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- قسم آراء العملاء بدون خلفية بيضاء وبلون زاهي -->
+    <section class="testimonials">
+        <div class="section-title">
+            <h2>آراء زبنائنا الكرام</h2>
+            <p>ثقتكم هي سر نجاحنا واستمرارنا</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p>"خدمة ممتازة واحترافية، وجدوا ليا موعد الفيزا والدوسيي كامل فـ وقت قياسي. شكراً لمكتب خدمات الأسطورة!"</p>
+                <h4>- أمين (الدار البيضاء)</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"تكتكوا ليا أوراق الـ CNSS وشهادة الأجر بلا صداع الراس وبأمانة عالية. كنوّصي بيهوم بشدة."</p>
+                <h4>- فاطمة الزهراء</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"تعامل راقي وسرعة في تجهيز ملف شنجن، دفعته وتقبل ليا بكل سهولة وبلا أخطاء. الله يجازيكم بخير."</p>
+                <h4>- سناء (الدار البيضاء)</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"كنت محتاج شهادة العمل وقسائم الدفع بطلب مستعجل، وجدوهوم ليا فـ نفس النهار وبدقة عالية."</p>
+                <h4>- محمد (أكادير)</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"عاونوني فـ تجميع أوراق الشراء ديال الدار ومواكبة إدارية احترافية حتى استلمت منزلي فـ وقت وجيز."</p>
+                <h4>- عزيز (الدار البيضاء)</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"تجربة جد رائعة، تواصلت معهم بخصوص ملف السفر ووجدو ليا كلشي فـ المستوى المطلوب وبدون تعقيدات."</p>
+                <h4>- مريم (الرباط)</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- التذييل -->
+    <footer>
+        <div class="logo-container" style="justify-content: center; margin-bottom: 1rem;">
+            <img src="logo.JPG" alt="شعار خدمات الأسطورة" class="logo-img">
+            <div class="logo-text" style="color: var(--accent);">
+                خدمات الأسطورة
+                <span style="color: #94a3b8;">LEGEND SERVICES</span>
+            </div>
+        </div>
+        <p>جميع الحقوق محفوظة © 2026 خدمات الأسطورة - 0679931143</p>
+    </footer>
+
+    <!-- زر واتساب عائم -->
+    <a href="https://wa.me/212679931143?text=%D8%A7%D9%84%D9%85%D8%B1%D8%AC%D9%88%20%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B8%D8%A7%D8%B1%20%D9%88%20%D8%B4%D9%83%D8%B1%D8%A7%20%D8%B9%D9%84%D9%89%20%D8%AB%D9%82%D8%AA%D9%83%D9%85%20%D8%A8%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A7%D8%B3%D8%B7%D9%88%D8%B1%D8%A9%20%D9%88%D8%A7%D9%86%D9%86%D8%A7%20%D9%81%D9%8A%20%D9%84%D8%AD%D8%B8%D8%A7%D8%AA%20%D8%B3%D9%88%D9%81%20%D9%86%D8%AA%D9%88%D8%A7%D8%B5%D9%84%20%D9%85%D8%B9%D9%83%20%D9%88%D8%B4%D9%83%D8%B1%D8%A7." class="whatsapp-float" target="_blank" title="تواصل معنا عبر الواتساب">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- سكربت التوجيه للواتساب -->
+    <script>
+        function sendToWhatsApp(event) {
+            event.preventDefault();
+            
+            const fullName = document.getElementById('fullName').value;
+            const service = document.getElementById('serviceType').value;
+            const city = document.getElementById('clientCity').value;
+            
+            const phoneNumber = "212679931143"; 
+            const welcomeMsg = "المرجو الانتظار و شكرا على ثقتكم بخدمات الاسطورة واننا في لحظات سوف نتواصل معك وشكرا.";
+            
+            const fullMessage = `${welcomeMsg}%0a%0a` +
+                                `📌 *تفاصيل الطلب:*%0a` +
+                                `- الاسم الكامل: ${fullName}%0a` +
+                                `- الخدمة المطلوبة: ${service}%0a` +
+                                `- المدينة: ${city}`;
+            
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${fullMessage}`;
+            window.open(whatsappURL, '_blank');
+        }
+    </script>
+</body>
+</html>
