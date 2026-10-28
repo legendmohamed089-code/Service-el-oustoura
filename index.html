@@ -212,7 +212,6 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
         }
 
-        /* أيقونة الطائرة والكرة الأرضية الخاصة ببطاقة الفيزا */
         .plane-icon-wrapper {
             position: relative;
             display: inline-flex;
@@ -281,6 +280,33 @@
             color: #4ade80;
         }
 
+        /* قسم QR Code الجديد */
+        .qr-section {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            text-align: center;
+            color: var(--white);
+            margin-top: 4rem;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border: 2px solid var(--accent);
+        }
+
+        .qr-container {
+            background: var(--white);
+            padding: 15px;
+            display: inline-block;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            margin-top: 1.5rem;
+        }
+
+        .qr-img {
+            width: 180px;
+            height: 180px;
+            display: block;
+        }
+
         /* استمارة طلب الخدمة */
         .calculator-section {
             background: var(--white);
@@ -316,11 +342,13 @@
             border-color: var(--accent);
         }
 
-        /* آراء العملاء */
+        /* آراء العملاء (خلفية زاهية ومشرقة جديدة) */
         .testimonials {
-            background-color: #e2e8f0;
+            background: linear-gradient(135deg, #fef3c7 0%, #e0f2fe 100%);
             padding: 5rem 1.5rem;
             margin-top: 4rem;
+            border-top: 3px solid var(--accent);
+            border-bottom: 3px solid var(--accent);
         }
 
         .testimonials-grid {
@@ -335,8 +363,8 @@
             background: var(--white);
             padding: 2rem;
             border-radius: 16px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            border-right: 4px solid var(--accent);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            border-right: 5px solid var(--accent);
         }
 
         .testimonial-card p {
@@ -427,7 +455,7 @@
         </div>
 
         <div class="services-grid">
-            <!-- كارت 1: التأشيرات والسفر المحدث بالأيقونة الجديدة -->
+            <!-- كارت 1: التأشيرات والسفر -->
             <div class="service-card card-visa">
                 <div class="plane-icon-wrapper">
                     <i class="fa-solid fa-plane-departure"></i>
@@ -442,7 +470,7 @@
                 </ul>
             </div>
 
-            <!-- كارت 2: الشهادات والوثائق الإدارية المحدث بفصل شهادة الأجر وقسائم الدفع -->
+            <!-- كارت 2: الشهادات والوثائق الإدارية -->
             <div class="service-card card-docs">
                 <i class="fa-solid fa-file-signature card-icon"></i>
                 <h3>الشهادات والوثائق الإدارية</h3>
@@ -464,6 +492,15 @@
                     <li><i class="fa-solid fa-circle-check"></i> مواكبة شخصية خطوة بخطوة</li>
                     <li><i class="fa-solid fa-circle-check"></i> امتلك منزلك في مدة لا تتجاوز 40 يوم</li>
                 </ul>
+            </div>
+        </div>
+
+        <!-- قسم رمز الاستجابة السريعة (QR Code) الجديد -->
+        <div class="qr-section">
+            <h2>زوروا موقعنا بسرعة عبر الهاتف!</h2>
+            <p style="color: #cbd5e1; margin-top: 0.5rem;">قم بمسح رمز الاستجابة السريعة (QR Code) بكاميرا هاتفك للوصول المباشر للخدمات</p>
+            <div class="qr-container">
+                <img src="qrcode.jpg" alt="QR Code خدمات الأسطورة" class="qr-img">
             </div>
         </div>
 
@@ -503,7 +540,7 @@
         </div>
     </div>
 
-    <!-- قسم آراء العملاء المحدث بالإضافات الجديدة -->
+    <!-- قسم آراء العملاء (خلفية زاهية ومشرقة جديدة) -->
     <section class="testimonials">
         <div class="section-title">
             <h2>آراء زبنائنا الكرام</h2>
@@ -546,7 +583,7 @@
     </footer>
 
     <!-- زر واتساب عائم -->
-    <a href="https://wa.me/212679931143?text=%D8%A7%D9%84%D9%85%D8%B1%D8%AC%D9%88%20%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B8%D8%A7%D8%B1%20%D9%88%20%D8%B4%D9%83%D8%B1%D8%A7%20%D8%B9%D9%84%D9%89%20%D8%AB%D9%82%D8%AA%D9%83%D9%85%20%D8%A8%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A7%D8%B3%D8%B7%D9%88%D8%B1%D8%A9%20%D9%88%D8%A7%D9%86%D9%86%D8%A7%20%D9%81%D9%8A%20%D9%84%D8%AD%D8%B8%D8%A7%D8%AA%20%D8%B3%D9%88%D9%81%20%D9%8AA%D9%88%D8%A7%D8%B5%D9%84%20%D9%85%D8%B9%D9%83%20%D9%88%D8%B4%D9%83%D8%B1%D8%A7." class="whatsapp-float" target="_blank" title="تواصل معنا عبر الواتساب">
+    <a href="https://wa.me/212679931143?text=%D8%A7%D9%84%D9%85%D8%B1%D8%AC%D9%88%20%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B8%D8%A7%D8%B1%20%D9%88%20%D8%B4%D9%83%D8%B1%D8%A7%20%D8%B9%D9%84%D9%89%20%D8%AB%D9%82%D8%AA%D9%83%D9%85%20%D8%A8%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A7%D8%B3%D8%B7%D9%88%D8%B1%D8%A9%20%D9%88%D8%A7%D9%86%D9%86%D8%A7%20%D9%81%D9%8A%20%D9%84%D8%AD%D8%B8%D8%A7%D8%AA%20%D8%B3%D9%88%D9%81%20%D9%86%D8%AA%D9%88%D8%A7%D8%B5%D9%84%20%D9%85%D8%B9%D9%83%20%D9%88%D8%B4%D9%83%D8%B1%D8%A7." class="whatsapp-float" target="_blank" title="تواصل معنا عبر الواتساب">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
