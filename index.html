@@ -17,7 +17,7 @@
             --accent-hover: #b38f27;
             --text-main: #334155;
             --text-light: #64748b;
-            --bg-light: #f8fafc;
+            --bg-light: #f1f5f9;
             --white: #ffffff;
             --success: #25d366;
         }
@@ -176,7 +176,7 @@
             font-size: 1.1rem;
         }
 
-        /* شبكة الخدمات (Grid) */
+        /* شبكة البطاقات بخلفيات زاهية وأنيقة */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -184,30 +184,50 @@
         }
 
         .service-card {
-            background: var(--white);
             padding: 2.5rem 2rem;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: 0.3s;
+            border-radius: 20px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* ألوان الخلفيات الزاهية للبطاقات */
+        .card-visa {
+            background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); /* أزرق سماوي زاهي */
+        }
+
+        .card-docs {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); /* كحلي فاخر ممزوج مع أزرق داكن */
             border-top: 4px solid var(--accent);
+        }
+
+        .card-realestate {
+            background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%); /* فيروزي زاهي */
         }
 
         .service-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
         }
 
-        .service-card i {
-            font-size: 2.5rem;
+        .service-card i.card-icon {
+            font-size: 2.8rem;
             color: var(--accent);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 15px;
+            border-radius: 50%;
         }
 
         .service-card h3 {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--primary);
+            font-size: 1.5rem;
+            font-weight: 900;
+            margin-bottom: 1.2rem;
+            color: var(--white);
         }
 
         .service-card ul {
@@ -216,20 +236,20 @@
         }
 
         .service-card ul li {
-            margin-bottom: 0.6rem;
-            color: var(--text-light);
+            margin-bottom: 0.8rem;
+            color: #f1f5f9;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
+            font-size: 1.05rem;
         }
 
         .service-card ul li i {
-            font-size: 0.9rem;
-            color: var(--success);
-            margin-bottom: 0;
+            font-size: 1rem;
+            color: #4ade80; /* أخضر نيون زاهي */
         }
 
-        /* استمارة التواصل والتفاعل */
+        /* استمارة طلب الخدمة */
         .calculator-section {
             background: var(--white);
             border-radius: 20px;
@@ -266,7 +286,7 @@
 
         /* آراء العملاء */
         .testimonials {
-            background-color: #f1f5f9;
+            background-color: #e2e8f0;
             padding: 5rem 1.5rem;
             margin-top: 4rem;
         }
@@ -282,8 +302,8 @@
         .testimonial-card {
             background: var(--white);
             padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            border-radius: 16px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
 
         .testimonial-card p {
@@ -374,36 +394,36 @@
         </div>
 
         <div class="services-grid">
-            <!-- كارت 1 -->
-            <div class="service-card">
-                <i class="fa-solid fa-passport"></i>
+            <!-- كارت 1: التأشيرات والسفر (خلفية زرقاء زاهية) -->
+            <div class="service-card card-visa">
+                <i class="fa-solid fa-passport card-icon"></i>
                 <h3>التأشيرات والسفر (Visa)</h3>
                 <ul>
-                    <li><i class="fa-solid fa-check"></i> حجز مواعيد دقيقة ومنظمة</li>
-                    <li><i class="fa-solid fa-check"></i> إعداد ملف شنجن (Schengen) متكامل واحترافي</li>
-                    <li><i class="fa-solid fa-check"></i> تفادي أخطاء الرفض والإرجاع</li>
+                    <li><i class="fa-solid fa-circle-check"></i> حجز مواعيد دقيقة ومنظمة</li>
+                    <li><i class="fa-solid fa-circle-check"></i> إعداد ملف شنجن متكامل واحترافي</li>
+                    <li><i class="fa-solid fa-circle-check"></i> تفادي أخطاء الرفض والإرجاع</li>
                 </ul>
             </div>
 
-            <!-- كارت 2 -->
-            <div class="service-card">
-                <i class="fa-solid fa-file-lines"></i>
+            <!-- كارت 2: الشهادات والوثائق الإدارية (خلفية كحلية فاخرة) -->
+            <div class="service-card card-docs">
+                <i class="fa-solid fa-file-signature card-icon"></i>
                 <h3>الشهادات والوثائق الإدارية</h3>
                 <ul>
-                    <li><i class="fa-solid fa-check"></i> شهادة العمل (Attestation de travail)</li>
-                    <li><i class="fa-solid fa-check"></i> شهادة الأجر وقسائم الدفع (Bulletins de paie)</li>
-                    <li><i class="fa-solid fa-check"></i> التصريح لدى الضمان الاجتماعي (CNSS)</li>
+                    <li><i class="fa-solid fa-circle-check"></i> شهادة العمل (Attestation de travail)</li>
+                    <li><i class="fa-solid fa-circle-check"></i> شهادة الأجر وقسائم الدفع (Bulletins de paie)</li>
+                    <li><i class="fa-solid fa-circle-check"></i> التصريح لدى الصندوق (CNSS)</li>
                 </ul>
             </div>
 
-            <!-- كارت 3 -->
-            <div class="service-card">
-                <i class="fa-solid fa-house-chimney-user"></i>
+            <!-- كارت 3: الخدمات العقارية (خلفية فيروزية زاهية) -->
+            <div class="service-card card-realestate">
+                <i class="fa-solid fa-house-chimney-user card-icon"></i>
                 <h3>الخدمات والتسهيلات العقارية</h3>
                 <ul>
-                    <li><i class="fa-solid fa-check"></i> المساعدة في تجميع أوراق الشراء والكراء</li>
-                    <li><i class="fa-solid fa-check"></i> تسريع وتسهيل الإجراءات الإدارية للعقار</li>
-                    <li><i class="fa-solid fa-check"></i> مواكبة شخصية خطوة بخطوة</li>
+                    <li><i class="fa-solid fa-circle-check"></i> المساعدة في تجميع أوراق الشراء والكراء</li>
+                    <li><i class="fa-solid fa-circle-check"></i> تسريع وتسهيل الإجراءات الإدارية للعقار</li>
+                    <li><i class="fa-solid fa-circle-check"></i> مواكبة شخصية خطوة بخطوة</li>
                 </ul>
             </div>
         </div>
@@ -479,7 +499,7 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- سكربت التوجيه للواتساب بالرسالة الترحيبية والتفاصيل -->
+    <!-- سكربت التوجيه للواتساب -->
     <script>
         function sendToWhatsApp(event) {
             event.preventDefault();
@@ -488,10 +508,7 @@
             const service = document.getElementById('serviceType').value;
             const city = document.getElementById('clientCity').value;
             
-            // رقم الواتساب الرسمي
             const phoneNumber = "212679931143"; 
-            
-            // النص والرسالة الترحيبية المطلوبة
             const welcomeMsg = "المرجو الانتظار و شكرا على ثقتكم بخدمات الاسطورة واننا في لحظات سوف نتواصل معك وشكرا.";
             
             const fullMessage = `${welcomeMsg}%0a%0a` +
