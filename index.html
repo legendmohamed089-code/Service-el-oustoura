@@ -280,6 +280,35 @@
             color: #4ade80;
         }
 
+        /* قسم الفيديو التعريفى المضاف جديداً */
+        .video-section {
+            margin-top: 4rem;
+            background: var(--white);
+            border-radius: 24px;
+            padding: 3rem 2rem;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+            border: 1px solid #e2e8f0;
+            text-align: center;
+        }
+
+        .video-wrapper {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.2);
+            border: 3px solid var(--accent);
+            background-color: var(--primary);
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            height: auto;
+            display: block;
+            outline: none;
+        }
+
         /* استمارة طلب الخدمة */
         .calculator-section {
             background: var(--white);
@@ -325,7 +354,7 @@
         }
 
         .testimonials-grid {
-            display: grid;
+            display grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
             max-width: 1200px;
@@ -362,7 +391,7 @@
             font-weight: 700;
         }
 
-        /* التذييل المعدل المزال منه رقم الهاتف */
+        /* التذييل */
         footer {
             background-color: var(--primary);
             color: var(--white);
@@ -401,7 +430,7 @@
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 1.8rem; }
-            .calculator-section { padding: 1.5rem; }
+            .calculator-section, .video-section { padding: 1.5rem; }
         }
     </style>
 </head>
@@ -479,6 +508,21 @@
             </div>
         </div>
 
+        <!-- قسم مقطع الفيديو التعريفي (الجديد) -->
+        <div class="video-section">
+            <div class="section-title" style="margin-bottom: 1.5rem;">
+                <h2>فيديو تعريفي بخدماتنا</h2>
+                <p>شاهد كيف نساعدك في إنجاز معاملتك بسرعة ودقة عالية</p>
+            </div>
+            <div class="video-wrapper">
+                <video controls poster="logo.JPG">
+                    <!-- يمكن تغيير مسار الفيديو أدناه إلى اسم فيديو خاص بك مثلاً promo.mp4 -->
+                    <source src="https://assets.mixkit.co/videos/preview/mixkit-working-overtime-in-the-office-41586-large.mp4" type="video/mp4">
+                    متصفحك لا يدعم تشغيل هذا الفيديو.
+                </video>
+            </div>
+        </div>
+
         <!-- استمارة طلب الخدمة -->
         <div class="calculator-section">
             <div class="section-title" style="margin-bottom: 2rem;">
@@ -549,7 +593,7 @@
         </div>
     </section>
 
-    <!-- التذييل النظيف بدون رقم الهاتف -->
+    <!-- التذييل -->
     <footer>
         <div class="logo-container" style="justify-content: center; margin-bottom: 1rem;">
             <img src="logo.JPG" alt="شعار خدمات الأسطورة" class="logo-img">
