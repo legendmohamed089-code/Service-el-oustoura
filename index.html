@@ -3,155 +3,591 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>خدمات الأسطورة | إعداد الملفات الإدارية، شهادة العمل، وتأشيرة شنجن بالمغرب</title>
-    <meta name="description" content="خدمات الأسطورة توفر لك الاستشارة، مواكبة إعداد ملفات شنجن، شهادة العمل، قسائم الدفع، والتصريح الاجتماعي CNSS بكل دقة واحترافية.">
-    <meta name="keywords" content="خدمات الأسطورة, شهادة العمل, شهادة الأجر, قسائم الدفع, التصريح الاجتماعي, CNSS, ملف الفيزا شنجن المغرب, Visa Schengen">
+    <title>خدمات الأسطورة - LEGEND SERVICES</title>
+    <!-- استيراد خط Tajawal العصري -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- مكتبة FontAwesome للأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- التصميم مدموج مباشرة هنا باش يرجع الموقع لطبيعته وأناقته فوراً -->
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: Tahoma, Arial, sans-serif; }
-        body { background-color: #f9f9f6; color: #2c2c2c; line-height: 1.6; direction: rtl; text-align: right; }
-        header { background: #1a1a1a; color: #fff; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
-        header div { display: flex; align-items: center; gap: 12px; }
-        header img { width: 45px; height: 45px; border-radius: 50%; object-fit: cover; border: 2px solid #d4af37; }
-        header div div { display: flex; flex-direction: column; font-weight: bold; font-size: 1.1rem; color: #fff; }
-        header div div span { font-size: 0.75rem; color: #d4af37; letter-spacing: 1px; }
-        header a { background-color: #25d366; color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: bold; transition: 0.3s; box-shadow: 0 4px 10px rgba(37,211,102,0.3); }
-        header a:hover { background-color: #1ebe5d; transform: scale(1.05); }
-        
-        section.hero { background: linear-gradient(135deg, #111 0%, #333 100%); color: white; text-align: center; padding: 60px 20px; }
-        section.hero img { width: 90px; height: 90px; border-radius: 50%; border: 3px solid #d4af37; margin-bottom: 20px; object-fit: cover; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
-        section.hero h1 { font-size: 2.2rem; margin-bottom: 15px; color: #fff; }
-        section.hero h1 span { color: #d4af37; }
-        section.hero p { font-size: 1.1rem; max-width: 700px; margin: 0 auto 25px; color: #ccc; }
-        section.hero a { display: inline-block; background: #d4af37; color: #111; padding: 12px 30px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: 0.3s; }
-        section.hero a:hover { background: #e5c158; }
+        :root {
+            --primary: #0f172a;
+            --secondary: #1e293b;
+            --accent: #d4af37;
+            --accent-hover: #b38f27;
+            --text-main: #334155;
+            --text-light: #64748b;
+            --bg-light: #f1f5f9;
+            --white: #ffffff;
+            --success: #25d366;
+        }
 
-        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
-        .section-title { text-align: center; margin-bottom: 40px; }
-        .section-title h2 { font-size: 2rem; color: #1a1a1a; margin-bottom: 10px; }
-        .section-title p { color: #666; font-size: 1.05rem; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Tajawal', sans-serif;
+        }
 
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 50px; }
-        .service-card { background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-top: 4px solid #d4af37; transition: 0.3s; }
-        .service-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
-        .service-card h3 { font-size: 1.3rem; color: #1a1a1a; margin-bottom: 15px; }
-        .service-card ul { list-style: none; padding-right: 0; }
-        .service-card ul li { margin-bottom: 10px; position: relative; padding-right: 20px; color: #555; }
-        .service-card ul li::before { content: "✓"; color: #d4af37; position: absolute; right: 0; font-weight: bold; }
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.7;
+        }
 
-        .testimonials { background: #f0f0eb; padding: 50px 20px; border-radius: 15px; margin-bottom: 40px; }
-        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 30px; }
-        .testimonial-card { background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.03); }
-        .testimonial-card p { font-style: italic; color: #444; margin-bottom: 15px; font-size: 0.95rem; }
-        .testimonial-card h4 { color: #d4af37; font-size: 0.9rem; text-align: left; }
+        /* رأس الصفحة */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--white);
+            padding: 0.8rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
 
-        footer { background: #1a1a1a; color: #aaa; text-align: center; padding: 30px 20px; margin-top: 50px; font-size: 0.9rem; }
-        footer img { width: 40px; height: 40px; border-radius: 50%; margin-bottom: 10px; border: 1px solid #d4af37; object-fit: cover; }
-        footer div { color: #fff; font-weight: bold; margin-bottom: 5px; }
-        footer span { color: #d4af37; font-size: 0.75rem; display: block; margin-bottom: 15px; }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
 
-        .whatsapp-float { position: fixed; bottom: 25px; left: 25px; background-color: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 4px 15px rgba(37,211,102,0.4); text-decoration: none; z-index: 100; transition: 0.3s; }
-        .whatsapp-float:hover { transform: scale(1.1); background-color: #1ebe5d; }
+        .logo-img {
+            height: 55px;
+            width: auto;
+            border-radius: 8px;
+            background: #fff;
+            padding: 2px;
+        }
+
+        .logo-text {
+            font-size: 1.3rem;
+            font-weight: 900;
+            color: var(--accent);
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        .logo-text span {
+            font-size: 0.75rem;
+            color: #cbd5e1;
+            letter-spacing: 1px;
+        }
+
+        .header-cta {
+            background-color: var(--success);
+            color: var(--white);
+            padding: 0.6rem 1.3rem;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+        }
+
+        .header-cta:hover {
+            background-color: #1eb954;
+            transform: translateY(-2px);
+        }
+
+        /* قسم الهيرو (Hero Section) */
+        .hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.88), rgba(30, 41, 59, 0.92)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: var(--white);
+            text-align: center;
+            padding: 5rem 1rem;
+        }
+
+        .hero-logo-big {
+            max-width: 160px;
+            margin-bottom: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.25);
+            background: #fff;
+            padding: 5px;
+        }
+
+        .hero h1 {
+            font-size: 2.3rem;
+            font-weight: 900;
+            margin-bottom: 1.2rem;
+            color: var(--white);
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 0 auto 2rem auto;
+            color: #cbd5e1;
+        }
+
+        .btn-main {
+            background-color: var(--accent);
+            color: var(--primary);
+            padding: 0.9rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+            transition: 0.3s;
+        }
+
+        .btn-main:hover {
+            background-color: var(--accent-hover);
+            transform: scale(1.03);
+        }
+
+        /* حاوية المحتوى الرئيسي */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.1rem;
+            font-weight: 900;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        /* شبكة البطاقات بخلفيات زاهية وأنيقة */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .card-visa {
+            background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+        }
+
+        .card-docs {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            border-top: 4px solid var(--accent);
+        }
+
+        .card-realestate {
+            background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .plane-icon-wrapper {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.18);
+            padding: 12px 20px;
+            border-radius: 50px;
+            margin-bottom: 1.2rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .plane-icon-wrapper i.fa-plane-departure {
+            font-size: 2.2rem;
+            color: var(--accent);
+        }
+
+        .plane-icon-wrapper i.fa-earth-americas {
+            font-size: 1.8rem;
+            color: #38bdf8;
+        }
+
+        .visa-subtext {
+            font-size: 0.95rem;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            color: #fef08a;
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .service-card i.card-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 1.2rem;
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 15px;
+            border-radius: 50%;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            font-weight: 900;
+            margin-bottom: 0.8rem;
+            color: var(--white);
+        }
+
+        .service-card ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .service-card ul li {
+            margin-bottom: 0.8rem;
+            color: #f1f5f9;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.02rem;
+        }
+
+        .service-card ul li i {
+            font-size: 1rem;
+            color: #4ade80;
+        }
+
+        /* استمارة طلب الخدمة */
+        .calculator-section {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+            margin-top: 4rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 1rem;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: var(--accent);
+        }
+
+        /* آراء العملاء (خلفية زاهية ومشرقة وبدون خلفيات بيضاء للبطاقات) */
+        .testimonials {
+            background: linear-gradient(135deg, #fef3c7 0%, #e0f2fe 100%);
+            padding: 5rem 1.5rem;
+            margin-top: 4rem;
+            border-top: 3px solid var(--accent);
+            border-bottom: 3px solid var(--accent);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.35);
+            backdrop-filter: blur(8px);
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+            border-right: 5px solid var(--accent);
+            border-top: 1px solid rgba(255, 255, 255, 0.6);
+            border-left: 1px solid rgba(255, 255, 255, 0.6);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+            transition: 0.3s;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.6);
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            color: var(--text-main);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .testimonial-card h4 {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* التذييل (Footer) */
+        footer {
+            background-color: var(--primary);
+            color: var(--white);
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            color: #94a3b8;
+        }
+
+        /* زر واتساب عائم */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+            background-color: var(--success);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .calculator-section { padding: 1.5rem; }
+        }
     </style>
 </head>
 <body>
 
-    <!-- الهيدر -->
+    <!-- رأس الصفحة -->
     <header>
-        <div>
-            <img alt="شعار خدمات الأسطورة" src="logo.JPG">
-            <div>
+        <div class="logo-container">
+            <img src="logo.JPG" alt="شعار خدمات الأسطورة" class="logo-img">
+            <div class="logo-text">
                 خدمات الأسطورة
                 <span>LEGEND SERVICES</span>
             </div>
         </div>
-        <a href="https://wa.me/212679931143?text=%D8%A7%D9%84%D9%85%D8%B1%D8%AC%D9%88%20%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B8%D8%A7%D8%B1%20%D9%88%20%D8%B4%D9%83%D8%B1%D8%A7%20%D8%B9%D9%84%D9%89%20%D8%AB%D9%82%D8%AA%D9%83%D9%85%20%D8%A8%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A7%D8%B3%D8%B7%D9%88%D8%B1%D8%A9." target="_blank">
+        <!-- تم حذف أيقونة الواتساب من هنا وبقاء النص فقط -->
+        <a href="https://wa.me/212679931143?text=%D8%A7%D9%84%D9%85%D8%B1%D8%AC%D9%88%20%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B8%D8%A7%D8%B1%20%D9%88%20%D8%B4%D9%83%D8%B1%D8%A7%20%D8%B9%D9%84%D9%89%20%D8%AB%D9%82%D8%AA%D9%83%D9%85%20%D8%A8%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A7%D8%B3%D8%B7%D9%88%D8%B1%D8%A9%20%D9%88%D8%A7%D9%86%D9%86%D8%A7%20%D9%81%D9%8A%20%D9%84%D8%AD%D8%B8%D8%A7%D8%AA%20%D8%B3%D9%88%D9%81%20%D9%86%D8%AA%D9%88%D8%A7%D8%B5%D9%84%20%D9%85%D8%B9%D9%83%20%D9%88%D8%B4%D9%83%D8%B1%D8%A7." class="header-cta" target="_blank">
             واتساب مباشر
         </a>
     </header>
 
-    <!-- الواجهة الترحيبية -->
+    <!-- واجهة الهيرو -->
     <section class="hero">
-        <img alt="شعار خدمات الأسطورة" src="logo.JPG">
-        <h1>سرعة، دقة، واحترافية في <span>معاملاتك الإدارية وتأشيرة شنجن</span></h1>
-        <p>بلا صداع الراس والروينة.. وفّر وقتك وجهدك واترك إعداد ملفاتك، شواهدك المهنية، وخدماتك العقارية في أيدٍ أمينة.</p>
-        <a href="#services">اكتشف جميع خدماتنا الإدارية</a>
+        <img src="logo.JPG" alt="خدمات الأسطورة" class="hero-logo-big">
+        <h1>سرعة، دقة، واحترافية في <span>معاملاتك الإدارية والفيزا</span></h1>
+        <p>بلا صداع الراس والروينة.. وفّر وقتك وجهدك واترك إعداد ملفاتك، شواهدك، وخدماتك العقارية في أيدٍ أمينة.</p>
+        <a href="#services" class="btn-main">
+            <i class="fa-solid fa-arrow-down"></i> اكتشف جميع خدماتنا
+        </a>
     </section>
 
-    <!-- الخدمات -->
+    <!-- قسم الخدمات الرئيسية -->
     <div class="container" id="services">
         <div class="section-title">
-            <h2>خدماتنا الإدارية والمهنية الاحترافية</h2>
-            <p>حلول متكاملة ومواكبة استشارية مصممة خصيصاً لتلبية احتياجاتك الإدارية والسفر</p>
+            <h2>خدماتنا الاحترافية</h2>
+            <p>حلول متكاملة مصممة خصيصاً لتلبية احتياجاتك الإدارية، السفر، والعقارات</p>
         </div>
 
         <div class="services-grid">
-            <div class="service-card">
-                <h3>تجهيز ملفات التأشيرة والسفر (Visa Schengen)</h3>
+            <!-- كارت 1: التأشيرات والسفر -->
+            <div class="service-card card-visa">
+                <div class="plane-icon-wrapper">
+                    <i class="fa-solid fa-plane-departure"></i>
+                    <i class="fa-solid fa-earth-americas"></i>
+                </div>
+                <h3>التأشيرات والسفر (Visa)</h3>
+                <div class="visa-subtext">Visa Schengen</div>
                 <ul>
-                    <li>إعداد ملف الفيزا شنجن متكامل واحترافي</li>
-                    <li>تفادي أخطاء الرفض والإرجاع الشائعة</li>
-                    <li>المساعدة في حجز مواعيد دقيقة ومنظمة</li>
+                    <li><i class="fa-solid fa-circle-check"></i> إعداد ملف الفيزا شنجن متكامل واحترافي</li>
+                    <li><i class="fa-solid fa-circle-check"></i> تفادي أخطاء الرفض والإرجاع</li>
+                    <li><i class="fa-solid fa-circle-check"></i> حجز مواعيد دقيقة ومنظمة</li>
                 </ul>
             </div>
 
-            <div class="service-card">
-                <h3>إعداد الشهادات والوثائق الإدارية</h3>
+            <!-- كارت 2: الشهادات والوثائق الإدارية -->
+            <div class="service-card card-docs">
+                <i class="fa-solid fa-file-signature card-icon"></i>
+                <h3>الشهادات والوثائق الإدارية</h3>
                 <ul>
-                    <li>شهادة العمل (Attestation de travail)</li>
-                    <li>شهادة الأجر (Attestation de salaire)</li>
-                    <li>قسائم الدفع (Bulletins de paie)</li>
-                    <li>التصريح لدى الصندوق الوطني للضمان الاجتماعي (CNSS)</li>
+                    <li><i class="fa-solid fa-circle-check"></i> شهادة العمل (Attestation de travail)</li>
+                    <li><i class="fa-solid fa-circle-check"></i> شهادة الأجر (Attestation de salaire)</li>
+                    <li><i class="fa-solid fa-circle-check"></i> قسائم الدفع (Bulletins de paie)</li>
+                    <li><i class="fa-solid fa-circle-check"></i> التصريح لدى الصندوق (CNSS)</li>
                 </ul>
             </div>
 
-            <div class="service-card">
+            <!-- كارت 3: الخدمات والتسهيلات العقارية -->
+            <div class="service-card card-realestate">
+                <i class="fa-solid fa-house-chimney-user card-icon"></i>
                 <h3>الخدمات والتسهيلات العقارية</h3>
                 <ul>
-                    <li>المساعدة في تجميع وثائق وأوراق الشراء</li>
-                    <li>تسريع وتسهيل الإجراءات الإدارية للعقار</li>
-                    <li>مواكبة استشارية شخصية خطوة بخطوة</li>
-                    <li>امتلك منزلك في مدة قياسية</li>
+                    <li><i class="fa-solid fa-circle-check"></i> المساعدة في تجميع أوراق الشراء</li>
+                    <li><i class="fa-solid fa-circle-check"></i> تسريع وتسهيل الإجراءات الإدارية للعقار</li>
+                    <li><i class="fa-solid fa-circle-check"></i> مواكبة شخصية خطوة بخطوة</li>
+                    <li><i class="fa-solid fa-circle-check"></i> امتلك منزلك في مدة لا تتجاوز 40 يوم</li>
                 </ul>
             </div>
         </div>
-    </div>
 
-    <!-- آراء العملاء -->
-    <div class="container">
-        <div class="testimonials">
-            <div class="section-title" style="margin-bottom: 20px;">
-                <h2>آراء زبنائنا الكرام</h2>
-                <p>ثقتكم هي سر نجاح خدمات الأسطورة</p>
+        <!-- استمارة طلب الخدمة -->
+        <div class="calculator-section">
+            <div class="section-title" style="margin-bottom: 2rem;">
+                <h2>اطلب خدمتك الآن مباشرة</h2>
+                <p>أدخل بياناتك وسننتقل بك فوراً للواتساب لتأكيد الطلب وبدء الإجراءات</p>
             </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p>"خدمة ممتازة واحترافية، وجدوا ليا موعد الفيزا والدوسيي كامل فـ وقت قياسي. شكراً لمكتب خدمات الأسطورة!"</p>
-                    <h4>- أمين (الدار البيضاء)</h4>
+
+            <form id="leadForm" onsubmit="sendToWhatsApp(event)">
+                <div class="form-group">
+                    <label for="fullName">الاسم الكامل:</label>
+                    <input type="text" id="fullName" class="form-control" placeholder="ادخل اسمك الكامل..." required>
                 </div>
-                <div class="testimonial-card">
-                    <p>"تكتكوا ليا أوراق الـ CNSS وشهادة الأجر بلا صداع الراس وبأمانة عالية. كنوّصي بيهوم بشدة."</p>
-                    <h4>- فاطمة الزهراء</h4>
+
+                <div class="form-group">
+                    <label for="serviceType">اختر الخدمة المطلوبة:</label>
+                    <select id="serviceType" class="form-control" required>
+                        <option value="">-- اضغط للاختيار --</option>
+                        <option value="ملف تأشيرة شنجن ومواعيد (Visa)">ملف تأشيرة شنجن ومواعيد (Visa)</option>
+                        <option value="شهادات إدارية (عمل، أجر، CNSS)">شهادات إدارية (عمل، أجر، CNSS)</option>
+                        <option value="خدمات وتسهيلات عقارية">خدمات وتسهيلات عقارية</option>
+                        <option value="استشارة أو خدمة أخرى">استشارة أو خدمة أخرى</option>
+                    </select>
                 </div>
-                <div class="testimonial-card">
-                    <p>"تعامل راقي وسرعة في تجهيز ملف شنجن، دفعته وتقبل ليا بكل سهولة وبلا أخطاء. الله يجازيكم بخير."</p>
-                    <h4>- سناء (الرباط)</h4>
+
+                <div class="form-group">
+                    <label for="clientCity">المدينة:</label>
+                    <input type="text" id="clientCity" class="form-control" placeholder="مثال: الدار البيضاء، أكادير..." required>
                 </div>
-            </div>
+
+                <button type="submit" class="btn-main" style="width: 100%; justify-content: center; border: none; cursor: pointer; background-color: var(--success); color: white;">
+                    <i class="fa-brands fa-whatsapp"></i> إرسال الطلب عبر الواتساب فوراً
+                </button>
+            </form>
         </div>
     </div>
 
-    <!-- الفوتر -->
+    <!-- قسم آراء العملاء بدون خلفية بيضاء وبلون زاهي -->
+    <section class="testimonials">
+        <div class="section-title">
+            <h2>آراء زبنائنا الكرام</h2>
+            <p>ثقتكم هي سر نجاحنا واستمرارنا</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p>"خدمة ممتازة واحترافية، وجدوا ليا موعد الفيزا والدوسيي كامل فـ وقت قياسي. شكراً لمكتب خدمات الأسطورة!"</p>
+                <h4>- أمين (الدار البيضاء)</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"تكتكوا ليا أوراق الـ CNSS وشهادة الأجر بلا صداع الراس وبأمانة عالية. كنوّصي بيهوم بشدة."</p>
+                <h4>- فاطمة الزهراء</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"تعامل راقي وسرعة في تجهيز ملف شنجن، دفعته وتقبل ليا بكل سهولة وبلا أخطاء. الله يجازيكم بخير."</p>
+                <h4>- سناء (الدار البيضاء)</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"كنت محتاج شهادة العمل وقسائم الدفع بطلب مستعجل، وجدوهوم ليا فـ نفس النهار وبدقة عالية."</p>
+                <h4>- محمد (أكادير)</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"عاونوني فـ تجميع أوراق الشراء ديال الدار ومواكبة إدارية احترافية حتى استلمت منزلي فـ وقت وجيز."</p>
+                <h4>- عزيز (الدار البيضاء)</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"تجربة جد رائعة، تواصلت معهم بخصوص ملف السفر ووجدو ليا كلشي فـ المستوى المطلوب وبدون تعقيدات."</p>
+                <h4>- مريم (الرباط)</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- التذييل -->
     <footer>
-        <img alt="شعار خدمات الأسطورة" src="logo.JPG">
-        <div>خدمات الأسطورة</div>
-        <span>LEGEND SERVICES</span>
+        <div class="logo-container" style="justify-content: center; margin-bottom: 1rem;">
+            <img src="logo.JPG" alt="شعار خدمات الأسطورة" class="logo-img">
+            <div class="logo-text" style="color: var(--accent);">
+                خدمات الأسطورة
+                <span style="color: #94a3b8;">LEGEND SERVICES</span>
+            </div>
+        </div>
         <p>جميع الحقوق محفوظة © 2026 خدمات الأسطورة - 0679931143</p>
     </footer>
 
     <!-- زر واتساب عائم -->
-    <a href="https://wa.me/212679931143?text=%D8%A7%D9%84%D9%85%D8%B1%D8%AC%D9%88%20%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B8%D8%A7%D8%B1%20%D9%88%20%D8%B4%D9%83%D8%B1%D8%A7%20%D8%B9%D9%84%D9%89%20%D8%AB%D9%82%D8%AA%D9%83%D9%85%20%D8%A8%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A7%D8%B3%D8%B7%D9%88%D8%B1%D8%A9." class="whatsapp-float" target="_blank" title="تواصل عبر الواتساب">💬</a>
+    <a href="https://wa.me/212679931143?text=%D8%A7%D9%84%D9%85%D8%B1%D8%AC%D9%88%20%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B8%D8%A7%D8%B1%20%D9%88%20%D8%B4%D9%83%D8%B1%D8%A7%20%D8%B9%D9%84%D9%89%20%D8%AB%D9%82%D8%AA%D9%83%D9%85%20%D8%A8%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A7%D8%B3%D8%B7%D9%88%D8%B1%D8%A9%20%D9%88%D8%A7%D9%86%D9%86%D8%A7%20%D9%81%D9%8A%20%D9%84%D8%AD%D8%B8%D8%A7%D8%AA%20%D8%B3%D9%88%D9%81%20%D9%86%D8%AA%D9%88%D8%A7%D8%B5%D9%84%20%D9%85%D8%B9%D9%83%20%D9%88%D8%B4%D9%83%D8%B1%D8%A7." class="whatsapp-float" target="_blank" title="تواصل معنا عبر الواتساب">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
+    <!-- سكربت التوجيه للواتساب -->
+    <script>
+        function sendToWhatsApp(event) {
+            event.preventDefault();
+            
+            const fullName = document.getElementById('fullName').value;
+            const service = document.getElementById('serviceType').value;
+            const city = document.getElementById('clientCity').value;
+            
+            const phoneNumber = "212679931143"; 
+            const welcomeMsg = "المرجو الانتظار و شكرا على ثقتكم بخدمات الاسطورة واننا في لحظات سوف نتواصل معك وشكرا.";
+            
+            const fullMessage = `${welcomeMsg}%0a%0a` +
+                                `📌 *تفاصيل الطلب:*%0a` +
+                                `- الاسم الكامل: ${fullName}%0a` +
+                                `- الخدمة المطلوبة: ${service}%0a` +
+                                `- المدينة: ${city}`;
+            
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${fullMessage}`;
+            window.open(whatsappURL, '_blank');
+        }
+    </script>
 </body>
 </html>
